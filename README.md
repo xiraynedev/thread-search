@@ -1,4 +1,5 @@
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2022-blue)
+![.NET](https://img.shields.io/badge/.NET-4.7.2-blue)
 
 # ThreadingDemo
 
