@@ -3,11 +3,11 @@
 
 # thread-search
 
-This project consists of a console app and a WPF app. Both apps recursively get the sizes of all files in the specified directories by using separate threads. The project was made using .NET 4.7.2 and Visual Studio 2019.
+This application consists of a console app and a WPF app. Both apps recursively get the sizes of all files in the specified directories by using separate threads. The application was made using .NET 4.7.2 and Visual Studio 2019.
 
-![console screenshot](/assets/images/console-project-screenshot.webp)
+![console screenshot](/assets/images/console-application-screenshot.webp)
 
-![wpf screenshot](assets/images/wpf-project-screenshot.webp)
+![wpf screenshot](assets/images/wpf-application-screenshot.webp)
 
 ## Installation Instructions
 
