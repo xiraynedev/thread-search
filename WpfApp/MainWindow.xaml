@@ -14,8 +14,8 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="Enter up to three input directories separated by spaces." HorizontalAlignment="Left" Margin="172,23,0,0" VerticalAlignment="Top" Width="439" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="InputDirectories" HorizontalAlignment="Left" Height="35" Margin="172,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="439" FontSize="16" Padding="5" TabIndex="1"/>
-        <Button Content="Read File Sizes" HorizontalAlignment="Left" Margin="172,177,0,0" VerticalAlignment="Top" Width="439" Height="44" FontSize="16" Click="BtnReadFileSizes" FontWeight="Light" Foreground="White" Background="{x:Null}" BorderThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" Cursor="Hand" TabIndex="2" Style="{DynamicResource ButtonStyle1}" IsDefault="True">
+        <TextBox x:Name="InputDirectories" HorizontalAlignment="Left" Height="35" Margin="172,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="439" FontSize="16" Padding="5" TabIndex="1" TextChanged="InputDirectories_TextChanged"/>
+        <Button x:Name="readFileSizesButton" Content="Read File Sizes" HorizontalAlignment="Left" Margin="172,177,0,0" VerticalAlignment="Top" Width="439" Height="44" FontSize="16" Click="ReadFileSizes" FontWeight="Light" Foreground="White" Background="{x:Null}" BorderThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" Cursor="Hand" TabIndex="2" Style="{DynamicResource ButtonStyle1}" IsDefault="True" IsEnabled="False">
             <Button.BindingGroup>
                 <BindingGroup/>
             </Button.BindingGroup>
@@ -24,7 +24,7 @@
             </Button.Effect>
         </Button>
         <TextBlock x:Name="DisplayFileSizes" HorizontalAlignment="Left" Margin="172,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.823,-1.246" Height="144" Width="439" Padding="10,5" FontSize="16" Background="White"/>
-        <Label Content="e.g. c:\input c:\numbers c:\files" HorizontalAlignment="Left" Margin="172,59,0,0" VerticalAlignment="Top" Width="439" FontSize="16" Foreground="White"/>
+        <Label Content="e.g. c:\input c:\numbers c:\data" HorizontalAlignment="Left" Margin="172,59,0,0" VerticalAlignment="Top" Width="439" FontSize="16" Foreground="White"/>
 
     </Grid>
 </Window>

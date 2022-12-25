@@ -8,9 +8,6 @@ namespace ConsoleApp
     {
         public static void GetFileSizes(string directory)
         {
-            // This method recursively gets the sizes of all files for a directory.
-            // If unauthorized access to a directory is detected, the method outputs a message and returns.
-
             long totalSizeInBytes = 0;
 
             if (Directory.Exists(directory))
@@ -33,9 +30,6 @@ namespace ConsoleApp
         }
         public static void StartThreads(string[] directories)
         {
-            // This method assigns each directory to a thread.
-            // Each thread calls the GetFileSizes method to retrieve the sizes of all files for each directory.
-
             foreach (string directory in directories)
             {
                 Thread thread = new Thread(() => GetFileSizes(directory))
@@ -43,17 +37,12 @@ namespace ConsoleApp
                     Name = directory
                 };
                 thread.Start();
-                // Using thr.Join() to wait for the threads to complete. It will lock the UI for about one second. Without using Join, the CPU time used is less than one second.
+                // Using thread.Join() to wait for the threads to complete. It will lock the UI for about one second. Without using Join, the CPU time used is less than one second.
                 thread.Join();
             }
         }
         private static void Main()
         {
-            // The main method prompts users to enter up to three directories separated by spaces.
-            // If the letter q is detected, the program exits.
-            // It then validates the length of the directories.
-            // If validations pass, the method calls the StartThreads method with the directories passed to it.
-
             bool quitProcess = false;
 
             while (true)
